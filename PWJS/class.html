@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP</title>
+</head>
+<body>
+    <!-- OBJECT ORIENTED PROGRAMMING -->
+
+    <script>
+        class Car{
+            name  ;
+            model ;
+            color ;
+            drive(cname , cmodel){
+                return cname + " and model is " + cmodel;
+            } 
+            brake(ccolor){
+                return  ccolor;
+            }
+        }
+        let car1 = new Car();
+        let c1Detail =  car1.drive('Suzuki',2022);
+        let car2 = new Car();
+        let c2Detail =  car2.brake('red');
+        let c2Details =  car2.drive('merceedes',2023);
+        console.log(c1Detail);
+        console.log(c2Detail);
+        console.log(c2Details)
+    </script>
+</body>
+</html>

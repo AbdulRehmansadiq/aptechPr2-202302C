@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 2</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container">
+    <table class="table mt-5">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">email</th>
+          <th scope="col">password</th>
+         
+        </tr>
+      </thead>
+      <tbody>
+     
+      
+      </tbody>
+    </table>
+</div>
+    <script>
+        let tbody = document.querySelector('tbody');
+        let tbrow = "";  
+        class Human{
+            name ;
+            email ;
+            password;
+            eat(){
+
+                return this.name + " has email " + this.email;  
+            }  
+        }
+        let human1 = new Human;
+        human1.name ="ali";
+        human1.email = "ali@gmail.com";
+        human1.password = 1234;
+        let human2 = new Human;
+        human2.name ="aqsa";
+        human2.email = "aqsa@gmail.com";
+        human2.password = 1234456;
+        let human3 = new Human;
+        human3.name ="hamza";
+        human3.email = "hamza@gmail.com";
+        human3.password = 1234456;
+        // console.log(human1);
+        // console.log(human2);
+        let allHuman = [human1,human2,human3];
+        // console.log(allHuman);
+        for (const key in allHuman) {
+                // console.log(allHuman[key].name)
+                tbrow += `  <tr>
+          <th scope="row">`+allHuman[key].name+`</th>
+          <td>`+allHuman[key].email+`</td>
+          <td>`+allHuman[key].password+`</td>
+        
+        </tr>`
+        }
+        tbody.innerHTML = tbrow;
+
+    </script>
+</body>
+</html>

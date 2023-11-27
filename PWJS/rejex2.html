@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+ <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    -->
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+        <div class="container mt-5 p-5">
+            <form action="" onsubmit="return false">
+                    <div class="form-group">
+                      <label for="">Name</label>
+                      <input type="text" name="" id="uName" class="form-control" placeholder="" aria-describedby="helpId">
+                      <small id="error" class=""></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Email</label>
+                        <input type="text" name="" id="uEmail" class="form-control" placeholder="" aria-describedby="helpId">
+                        <small id="error" class=""></small>
+                      </div>
+                      <div class="form-group">
+                        <label for="">Password</label>
+                        <input type="text" name="" id="uPassword" class="form-control" placeholder="" aria-describedby="helpId">
+                        <small id="error" class=""></small>
+                      </div>
+                      <button id="sub" class="btn btn-info">Submit</button>
+            </form>
+        </div>
+
+        <script>
+            $('#uName').keyup(function(){
+                let userName = $(this).val();
+                let userNameRE = /^[a-zA-Z\s]{3,}$/;
+                // console.log(userName);
+                if(!userNameRE.test(userName)){
+                        $(this).css('border','2px solid red');
+                        $(this).next('#error').show().text('please enter valid name').css('color','red');
+                }
+                else{
+                    $(this).css('border','2px solid green');
+                    $(this).next('#error').hide();
+                }
+            })
+            $('#uEmail').keyup(function(){
+                let userEmail = $(this).val();
+                let userEmailRE = /^[a-zA-Z0-9_]{5,}@[a-z]{5,8}.[a-z]{2,5}$/;
+                if(!userEmailRE.test(userEmail)){
+                        $(this).css('border','1px solid red');
+                        $(this).next('#error').show().text('please enter valid email').css('color','red');
+                }
+                else{
+                    $(this).css('border','2px solid green');
+                    $(this).next('#error').hide();
+                }
+            })
+            $('#uPassword').keyup(function(){
+                let userPassword = $(this).val();
+                let userPasswordRE = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d_\@]{8,}$/;
+                if(!userPasswordRE.test(userPassword)){
+                        $(this).css('border','1px solid red');
+                        $(this).next('#error').show().text('password should contains at least one upper case lower and digit character').css('color','red');
+                }
+                else{
+                    $(this).css('border','2px solid green');
+                    $(this).next('#error').hide();
+                    
+
+                }
+            });
+
+            function emptyFields(id){
+                if($(id).val() == ''){
+                        $(id).css('border','1px solid red');
+                        $(id).next('#error').show().text('please fill out this field').css('color','red');
+                }        
+            }
+            $('#sub').click(function(){
+                let userName = $('#uName').val();
+                let userNameRE = /^[a-zA-Z\s]{3,}$/;
+                let userEmail = $('#uEmail').val();
+                let userEmailRE = /^[a-zA-Z0-9_]{5,}@[a-z]{5,8}.[a-z]{2,5}$/;
+                let userPassword = $('#uPassword').val();
+                let userPasswordRE = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d_\@]{8,}$/;
+                let myData = JSON.parse(localStorage.getItem('myData')) || [];
+                emptyFields('#uName');
+                emptyFields('#uEmail');
+                emptyFields('#uPassword');
+                if(userNameRE.test(userName) && userEmailRE.test(userEmail) && userPasswordRE.test(userPassword)){
+                        myData.push({'name':userName,'email':userEmail,'password':userPassword});
+                        localStorage.setItem('myData',JSON.stringify(myData));
+                        alert('register successfully');
+                        // $('input').val('');
+                         location.assign('rejex2.html');
+                }
+                else{
+                    alert('invalid data');
+                }
+
+            })
+        </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+</head>
+<body>
+    
+
+    <script>
+        class Animal{
+            habbit;
+            eat(){
+                    return "all animals eat something and habbit of animal is " + this.habbit; 
+                }
+        }
+        class Dog extends Animal{
+
+            bark(){
+                return ' all dogs are barking ';
+            }
+        }
+        // let AnimalObj = new  Animal;
+        // AnimalObj.habbit = "loyal";
+        //  let A1 =  AnimalObj.eat();
+        // console.log(A1); 
+        let DogObj = new Dog;
+        DogObj.habbit = 'loyal';
+        let DOg1 = DogObj.eat();
+        console.log(DOg1);
+         let B1 = DogObj.bark();
+         console.log(B1);
+
+    </script>
+</body>
+</html>
