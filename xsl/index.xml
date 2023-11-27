@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="index.xsl" type="text/xsl"?>
+<aptech>
+  <faculty>
+    <facultyName>ali</facultyName>
+    <facultySalary>90000</facultySalary>
+    <facultyEmail>ali@gmail.com</facultyEmail>
+    <facultyCity>lahore</facultyCity>
+    <facultyImage>h1.jpg</facultyImage>
+
+  </faculty> 
+  <faculty>
+    <facultyName>aqsa</facultyName>
+    <facultySalary>85000</facultySalary>
+    <facultyEmail>aqsa@gmail.com</facultyEmail>
+    <facultyCity>lahore</facultyCity>
+    <facultyImage>h2.jpg</facultyImage>
+  </faculty> 
+  <faculty>
+    <facultyName>hamza</facultyName>
+    <facultySalary>80000</facultySalary>
+    <facultyEmail>h@gmail.com</facultyEmail>
+    <facultyCity>karachi</facultyCity>
+    <facultyImage>h3.jpg</facultyImage>
+  </faculty> 
+ 
+</aptech>

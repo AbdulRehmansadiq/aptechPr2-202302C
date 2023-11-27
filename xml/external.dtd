@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT aptech (faculty*,it*)>
+<!ELEMENT faculty  (name ,email)>
+<!ELEMENT it (name, salary)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT salary (#PCDATA)>
+<!ATTLIST name gender CDATA #REQUIRED>

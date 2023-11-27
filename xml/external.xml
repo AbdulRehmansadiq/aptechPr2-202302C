@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE aptech SYSTEM "external.dtd" [
+
+]>
+<aptech>
+    <faculty>
+        <name gender="male"></name>
+        <email>ali</email>
+    </faculty>
+    <it>
+        <name gender="female"></name>
+        <salary></salary>
+    </it>
+</aptech>
