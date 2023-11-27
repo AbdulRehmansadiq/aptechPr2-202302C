@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="aptech">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="faculty" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                               <xs:element name="facultyName" >
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:pattern value="[a-z]{3,6}" />
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                </xs:element>
+                            <xs:element name="facultySalary" type="xs:integer" />
+                            <xs:element name="facultyEmail">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:minLength value="10" />
+                                        <xs:maxLength value="15" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="facultyCity" >
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="karachi" />
+                                        <xs:enumeration value="lahore" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="it">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="empName" />  
+                            <xs:element name="salary" />
+                            </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="examination"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
