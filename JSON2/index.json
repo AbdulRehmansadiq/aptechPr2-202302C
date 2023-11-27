@@ -1,0 +1,12 @@
+[
+    {"id":1,"pName":"bag1","pPrice":4000,"pImage":"images/ch3.jpg","des":"   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident aperiam, cum fugit esse minima quo dolorem placeat, totam nobis perferendis deleniti voluptatum est tempore assumenda neque ex dolor adipisci praesentium!"},
+    {"id":2,"pName":"bag2","pPrice":4500,"pImage":"images/ch1.jpg","des":"   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident aperiam, cum fugit esse minima quo dolorem placeat, totam nobis perferendis deleniti voluptatum est tempore assumenda neque ex dolor adipisci praesentium!"},
+    {"id":3,"pName":"bag2","pPrice":4700,"pImage":"images/ch2.jpg","des":"   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident aperiam, cum fugit esse minima quo dolorem placeat, totam nobis perferendis deleniti voluptatum est tempore assumenda neque ex dolor adipisci praesentium!"},
+    {"id":4,"pName":"bag2","pPrice":3500,"pImage":"images/ch3.jpg","des":"   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident aperiam, cum fugit esse minima quo dolorem placeat, totam nobis perferendis deleniti voluptatum est tempore assumenda neque ex dolor adipisci praesentium!"},
+    {"id":5,"pName":"bag5","pPrice":4500,"pImage":"images/n1.jpg","des":"   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident aperiam, cum fugit esse minima quo dolorem placeat, totam nobis perferendis deleniti voluptatum est tempore assumenda neque ex dolor adipisci praesentium!"},
+    {"id":6,"pName":"bag6","pPrice":4000,"pImage":"images/h1.jpg","des":"   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident aperiam, cum fugit esse minima quo dolorem placeat, totam nobis perferendis deleniti voluptatum est tempore assumenda neque ex dolor adipisci praesentium!"},
+    {"id":7,"pName":"bag1","pPrice":4000,"pImage":"images/h2.jpg","des":"   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident aperiam, cum fugit esse minima quo dolorem placeat, totam nobis perferendis deleniti voluptatum est tempore assumenda neque ex dolor adipisci praesentium!"},
+    {"id":8,"pName":"bag8","pPrice":4000,"pImage":"images/h3.jpg","des":"   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident aperiam, cum fugit esse minima quo dolorem placeat, totam nobis perferendis deleniti voluptatum est tempore assumenda neque ex dolor adipisci praesentium!"}
+    
+
+]
