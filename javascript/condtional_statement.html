@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional_statememt or decision making</title>
+</head>
+<body>
+<label for="">uSER rEsult</label>
+<input type="text" name="" id="res">
+<button onclick="result()">find remarks</button>
+<p id="para"></p>
+<script>
+    function result(){
+        let result = document.getElementById("res").value;
+        // if(result == "pass"){
+        //     document.getElementById("para").innerHTML = "excellent performance";
+        // }
+        // else{
+        //     document.getElementById("para").innerHTML = " data not matched"
+        // }
+
+        // if else if
+        if(result >= 80 && result <= 100){
+            document.getElementById("para").innerHTML = "A+";
+
+        }
+        else if(result >= 70 && result <= 79){
+            document.getElementById("para").innerHTML = "A";
+        }
+        else if(result >= 60 && result <= 69){
+            document.getElementById("para").innerHTML = "B";
+        }
+    }
+</script>
+</body>
+</html>

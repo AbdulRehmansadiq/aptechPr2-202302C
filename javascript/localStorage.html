@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Register user</h1>
+<label for="">Name</label>
+<input type="text" id="std_name">
+<br>
+<br>
+<label for="">Password</label>
+<input type="text" id="pass">
+<br>
+<br><button onclick="reg()">Register</button>
+</div>
+
+
+
+
+<!-- login -->
+<div class="container">
+    <h1>login user</h1>
+<label for="">Name</label>
+<input type="text" id="sname">
+<br>
+<br>
+<label for="">Password</label>
+<input type="text" id="spass">
+<br>
+<br><button onclick="login()">login</button>
+</div>
+    <script>
+        function reg(){
+            let s_name = document.querySelector("#std_name").value;
+            let s_pass = document.querySelector("#pass").value;
+            // console.log(s_name);
+            localStorage.setItem('student_name',s_name);
+            localStorage.setItem('student_pass',s_pass);
+            alert("register");
+        }
+
+
+        function login(){
+            let sname = document.querySelector("#sname").value;
+            let spass = document.querySelector("#spass").value;
+            if(localStorage.getItem("student_name") == sname && localStorage.getItem("student_pass") == spass){
+                    alert("sucessfully login");
+                    window.location.href = "calculator.html";
+            }
+            else{
+                alert("invalid user name or password");
+            }
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM with Functions</title>
+    <style>
+        h1{
+            background-color: yellow;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <label >user name : </label>
+    <input type="text" id="inp" >
+    <br>
+    <br>
+    <label>user age :</label>
+    <input type="text" id="age">
+    <button onclick="user_data()">enter</button>
+    <h1 id="data"></h1>
+    <p id="para"></p>
+    <!-- DOM With Functions and Conditional Statement-->
+        <script>
+            // let std_name = "ali";
+            // document.getElementById("data").innerHTML =  "hello " + std_name ;
+
+            function user_data(){
+                let emp_name = document.getElementById("inp").value;
+                let emp_age = document.getElementById("age").value;
+                document.getElementById("data").innerHTML = "hello "+emp_name + " your age is " + emp_age;
+          
+            }
+
+
+        </script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested</title>
+    <style>
+        .main{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+    <label for="">uSER qualification</label>
+    <input type="text" id="q">
+    <br>
+    <br>
+    <label for="">city</label>
+    <input type="text" id="city">
+    <br>
+    <br>
+</div>
+    <div class="main">
+        <label for="">pass / fail</label>
+        <input type="text" id="res">
+    </div>
+    <button onclick="fun()">submit</button>
+<h1></h1>
+<h2></h2>
+
+    <script>
+        function fun(){
+            let q =  document.querySelector("#q").value;
+            let city = document.querySelector("#city").value; 
+            let result = document.querySelector("#res").value ;
+            if(q=="mcs" && city == "karachi"){
+                document.querySelector(".main").style.display = "block";
+                document.querySelector(".con").style.display = "none";
+                document.querySelector("h1").innerHTML = "";
+              //   nested condition start
+                if(result == "pass"){
+                  document.querySelector("h2").innerHTML = "good luck and congratualtoins";
+                }
+                else if(result == "fail"){
+                    document.querySelector("h2").innerHTML = "better luck next time";
+                }
+                // nested condition end
+            }
+            else{
+                document.querySelector("h1").innerHTML = "not eligible";
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+</head>
+<body>
+    <label for="">start number</label>
+    <input type="text" id="v">
+    <br>
+    <br>
+    <label for="">End Number</label>
+    <input type="text" id="t">
+    <br>
+    <button onclick="even_odd()">submit</button>
+    <script>
+        function even_odd(){
+        let num1 = document.querySelector("#v").value;
+        let num2 = document.querySelector("#t").value;
+        for(let i = num1 ; i <= num2 ; i++ ){
+            if(i%2==0){
+                document.write(i +" number is even" + "<br>");
+            }
+            else{
+                document.write( i + " number is odd" + "<br>");
+            }
+
+        }
+    }
+    </script>
+</body>
+</html>

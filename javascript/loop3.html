@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <h1></h1>
+
+    <p id="para"></p>
+
+    <script>
+        let students = ["ali","hamza","aqsa","huzaifa" ,"arhama","sana"];
+        let data =  document.querySelector("h1");
+        let p = document.querySelector("#para");
+        // data.innerHTML +=  students[2] + " " + students[0] + " " + students[1] + "<br>";
+        // data.innerHTML += "hello js";
+            for(let i = 0 ; i<students.length ; i++){
+                p.innerHTML += students[i] + "<br>";
+            }
+
+
+    </script>
+</body>
+</html>

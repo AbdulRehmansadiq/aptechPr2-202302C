@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        button{
+            text-align: center;
+            padding: 5px 13px;
+        }
+        #pl{
+            padding:22px 14px ;
+        }
+        #eq{
+            padding: 5px 35px ;
+        }
+        #cl{
+            padding: 5px 68px;
+        }
+    </style>
+</head>
+<body>
+    
+    <table class="table" border="1px">
+       
+        <tbody>
+            <tr>
+                <td  colspan="4">
+                    <input type="text" id="inp">
+                </td>
+                </tr>
+                <tr>
+                <td><button onclick="num(9)">9</button></td>
+                <td><button onclick="num(8)">8</button></td>
+                <td><button onclick="num(7)">7</button></td>
+                <td><button onclick="op('*')">x</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="num(6)">6</button></td>
+                <td><button onclick="num(5)">5</button></td>
+                <td><button onclick="num(4)">4</button></td>
+                <td><button onclick="op('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="num(3)">3</button></td>
+                <td><button onclick="num(2)">2</button></td>
+                <td><button onclick="num(1)">1</button></td>
+                <td rowspan="2"><button onclick="op('+')" id="pl">+</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button onclick="sol()"  id="eq">=</button></td>
+                <td><button onclick="num('.')">.</button></td> 
+            </tr>
+            <tr>
+                <td colspan="4"><button  onclick="cl()" id="cl">Clear</button></td>  
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        function num(btn_num){
+        document.querySelector("#inp").value += btn_num; 
+        }
+        function op(btn_op){
+             document.querySelector("#inp").value += btn_op; 
+        }
+        function sol(){
+               let data = document.querySelector("#inp").value;
+               document.querySelector("#inp").value = eval(data);
+            // console.log(inp);
+        }
+        function cl(){
+            document.querySelector("#inp").value = " ";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for loop</title>
+    <style>
+        td{
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+       <label for="">enter number</label>
+       <input type="text" id="v"> 
+    <button onclick="fun()">click here</button>
+
+
+    <table border="1px">
+        <tbody id="main">
+
+        </tbody>
+    </table>
+
+    <script>
+
+        function fun(){
+            let user_num = document.getElementById("v").value;
+        // let num = 16 ;
+        for(let i = 1 ; i <=10 ; i++){
+            document.getElementById("main").innerHTML +=
+            "<tr>" 
+            + "<td>"+user_num+"</td>"+ "<td>"+'x'+"</td>"
+            +"<td>"+ i+"</td>" +
+            "<td>"+'='+"</td>"+
+            "<td>"+user_num*i+ "</td>"
+            +"</tr>"     
+
+        }
+    }
+    </script>
+</body>
+</html>

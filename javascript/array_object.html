@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <style>
+        .row{
+            display: flex;
+        }
+        .col{
+            height: 450px;
+            width: 350px;
+            border: 1px solid black;
+        }
+        .img_div{
+            height: 350px;
+            width:  350px;
+        }
+        .col .img img{
+                height: 350px !important;
+                width:  350px !important;
+        }
+        .content{
+            height: 100px;
+            width:  350px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            
+        </div>
+    </div>
+
+
+    <script>
+        let r = document.querySelector(".row");
+        let c = "";
+
+        let all_Data = [
+            {c_name:"Toyota Carolla" , price : 5600000, modal: 2021 , des : "rem, ipsum dolor sit amet consectetur " , image : "images/c1.jpg"},
+            {c_name:"Mercedes" , price : 9600000, modal : 2022 , des : "rem, ipsum dolor sit amet consectetur " , image : "images/c2.jpg " },
+            {c_name: "Suzuki Honda" , price : 4600000, modal: 2018 , des : "rem, ipsum dolor sit amet consectetur ",  image : "images/c3.png" },
+            {c_name: "Mehran" , price : 7600000, modal: 2023 , des : "rem, ipsum dolor sit amet consectetur " , image : "images/c4.jpg "},
+
+        ];
+        for(let i = 0 ; i<all_Data.length ; i++ ){
+            c += `
+            <div class="col">  
+                <div class="img_div">
+                    <img src="`+all_Data[i].image+`" alt="">
+                </div>
+                <div class="content">
+                    <h2>`+all_Data[i].c_name+`</h2>
+                    <p>`+all_Data[i].price+`</p>
+                </div>
+            </div>`
+        }
+
+        r.innerHTML += c;
+    </script>
+</body>
+</html>

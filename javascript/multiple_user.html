@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Register user</h1>
+<label for="">Name</label>
+<input type="text" id="std_name">
+<br>
+<br>
+<label for="">Password</label>
+<input type="text" id="pass">
+<br>
+<br><button onclick="reg()">Register</button>
+</div>
+
+
+
+
+<!-- login -->
+<div class="container">
+    <h1>login user</h1>
+<label for="">Name</label>
+<input type="text" id="sname">
+<br>
+<br>
+<label for="">Password</label>
+<input type="text" id="spass">
+<br>
+<br><button onclick="login()">login</button>
+</div>
+<h1></h1>
+    <script>
+        let data = [];
+        function reg(){
+            let s_name = document.querySelector("#std_name").value;
+            let s_pass = document.querySelector("#pass").value;
+            data.push({'name':s_name,'password':s_pass});
+            localStorage.setItem('users',JSON.stringify(data));
+            alert("register");
+        }
+
+
+        function login(){
+            let sname = document.querySelector("#sname").value;
+            let spass = document.querySelector("#spass").value;
+            let AllData = localStorage.getItem('users');
+            // console.log(AllData);
+             let AllParseData = JSON.parse(AllData);
+            //  console.log(AllParseData);
+            
+            let MachData = AllParseData.find(function(record){
+              return  record.name == sname && record.password == spass
+                    
+            })
+            if(MachData){
+                    document.querySelector("h1").innerHTML = "welcome "+ sname;
+            }
+            else{
+                document.querySelector("h1").innerHTML = "invalid user name and password ";
+            }
+           
+           
+        }
+        
+    </script>
+</body>
+</html>

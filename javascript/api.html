@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Programming interface</title>
+    <script async
+    src="https://maps.googleapis.com/maps/api/js">
+</script>
+<style>
+    #demo{
+        height: 200px;
+        width: 200px;
+    }
+</style>
+</head>
+<body>
+
+    <button onclick="Gapi()">location</button>
+    <!-- google map api -->
+<!-- <div class="data"></div> -->
+<div id="demo"></div>
+    <script>
+    let d = document.querySelector(".data");
+        function Gapi(){
+          if(navigator.geolocation){
+                  navigator.geolocation.getCurrentPosition(get_coords);
+                //  alert('working');
+                     
+
+            }
+
+            // else{
+            //     alert(' not working');
+            // }
+
+            function get_coords(abc){
+                    d.innerHTML = "latitude " + abc.coords.latitude + " longitude " + abc.coords.longitude;
+            }
+      
+        //loading google map
+const a = document.getElementById("demo");
+let latlng = new google.maps.LatLng(24.8693606,67.082216)
+let map= new google.maps.Map(a,{
+    center:latlng,
+    zoom:16,    
+    
+    mapTypeId:"roadmap"
+});
+
+// create the map object
+// var mymap= new google.maps.Map(document.getElementById("demo"),myobj);
+
+
+
+
+        }
+        // console.log(window);
+    </script>
+
+
+</body>
+</html>

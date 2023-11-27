@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data validation</title>
+</head>
+<body>
+    
+<label for="">email</label>
+<input type="text" id="e">
+<br>
+<span id="e_error"></span>
+<br>
+<br>
+<label for="">Password</label>
+<input type="text" id="p">
+<br>
+<span id="p_error"></span>
+<br>
+<button onclick="fun()">submit</button>
+<p class="para"></p>
+    <script>
+        function fun(){
+            let u_email = document.querySelector("#e").value;
+            let u_pass = document.querySelector("#p").value;
+            let email_span = document.querySelector("#e_error");
+            let pass_span = document.querySelector("#p_error");
+            let p = document.querySelector(".para");
+            if(u_email && u_pass){
+                p.innerHTML = "welcome " + u_email ;
+                 email_span.innerHTML = " ";
+                                              
+            }
+            else if(u_email != "" && u_pass == ""){
+                    
+                pass_span.innerHTML = "please filled out this field";
+                email_span.innerHTML = " ";
+               pass_span.style.color = "red"; 
+               p.innerHTML = " ";
+            }
+            else if(u_email == "" && u_pass != ""){
+                email_span.innerHTML = "please filled out this field";
+                 pass_span.innerHTML = " ";
+                email_span.style.color = "red"; 
+                p.innerHTML = " ";
+            }
+            else if(u_email == "" && u_pass == ""){
+                email_span.innerHTML = "please filled out this field";
+                pass_span.innerHTML = "please filled out this field";
+                email_span.style.color = "red"; 
+                pass_span.style.color = "red"; 
+                p.innerHTML = " ";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multidimensional Array</title>
+</head>
+<body>
+    <div id="record">
+
+    </div>
+
+    <script>
+        let r = document.querySelector("#record");
+        let students = [
+        ["ali" , 21 , "karachi"] , 
+        ["hamza" , 22 , "lahore"],
+        ["aqsa" , 23 , "multan"]
+                                
+        ];
+            // r.innerHTML +=  students[0][0] + " " + students[0][1]+ " " +students[0][2]
+            // + " " + students[1][0] + " " +students[1][1]+" " + students[1][2]; 
+
+
+            for(let i = 0 ; i<students.length; i++){
+
+                for(let j = 0 ; j<students[i].length; j++){ 
+                    r.innerHTML += students[i][j] + " ";
+                }
+                r.innerHTML += "<br>";
+            }
+    
+    </script>
+
+</body>
+</html>

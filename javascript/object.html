@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <div class="main"></div>
+
+
+    <script>
+        let students = {std_name:"ali",age:21 ,city:"karachi", email : "ali@gmail.com"};
+        // document.querySelector(".main").innerHTML = students.std_name + " age is " + students.age + " city is " + students.city;
+        for(let key in students ){
+            document.querySelector(".main").innerHTML += students[key] + "<br>"
+
+        }
+    </script>
+</body>
+</html>
